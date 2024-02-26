@@ -1,12 +1,15 @@
 <script>
 import TheWelcome from '../components/TheWelcome.vue'
-import flash from '@/mixins/flash'
-
+import { useFlash } from '@/composables/useFlash'
 export default {
     components: {
         TheWelcome
     },
-    mixins: [flash]
+    setup() {
+        const { flash } = useFlash()
+
+        return { flash }
+    }
 }
 </script>
 
@@ -14,6 +17,6 @@ export default {
     <main>
         <TheWelcome />
 
-        <button @click="flash('Flash from homepage!')">Click me!</button>
+        <button @click="flash('Info', 'Flash from homepage!', 'info')">Click me!</button>
     </main>
 </template>
