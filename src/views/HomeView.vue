@@ -1,22 +1,24 @@
-<script>
-import TheWelcome from '../components/TheWelcome.vue'
-import { useFlash } from '@/composables/useFlash'
-export default {
-    components: {
-        TheWelcome
-    },
-    setup() {
-        const { flash } = useFlash()
+<script setup>
+import { ref } from 'vue';
 
-        return { flash }
+let food = ref(localStorage.getItem('food'))
+let age = ref(localStorage.getItem('age'))
+
+function write(key, value) {
+    if (!value) {
+        localStorage.removeItem(key)
+    } else {
+        localStorage.setItem(key, value)
     }
 }
 </script>
 
 <template>
     <main>
-        <TheWelcome />
+        <p>What is your favorite food: </p>
+        <input type="text" v-model="food" @input="write('food', food)">
 
-        <button @click="flash('Info', 'Flash from homepage!', 'info')">Click me!</button>
+        <p>What is your age?</p>
+        <input type="text" v-model="age" @input="write('age', age)">
     </main>
 </template>
