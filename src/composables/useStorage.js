@@ -10,16 +10,6 @@ export function useStorage(key, initialValue) {
 
   write()
 
-  // Watch effect ini gabungan dari watch dan onMounted
-  // and also deep check
-  // watchEffect(() => {
-  //   write()
-  // })
-
-  // onMounted(() => {
-  //   write()
-  // })
-
   watch(
     state,
     () => {
