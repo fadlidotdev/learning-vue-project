@@ -1,8 +1,11 @@
 <script setup>
-import { defineProps } from 'vue'
-const { profile } = defineProps({
-  profile: Object
-})
+import { inject } from 'vue'
+
+const profile = inject('profile')
+
+setTimeout(() => {
+  profile.name = 'Nova Julita'
+}, 3000)
 </script>
 
 <template>
