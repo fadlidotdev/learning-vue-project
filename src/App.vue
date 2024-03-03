@@ -1,9 +1,18 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue'
+import { reactive } from 'vue'
+
+const profile = reactive({
+  name: 'Fadli Hidayatullah',
+  memberType: 'Gold'
+})
 </script>
 
 <template>
+  <Header :profile="profile" />
+
   <header>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
@@ -12,6 +21,7 @@ import HelloWorld from './components/HelloWorld.vue'
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/counter">Counter</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
     </div>
