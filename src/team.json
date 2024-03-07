@@ -1,0 +1,36 @@
+{
+  "name": "HeroSchool",
+  "spots": 5,
+  "members": [
+    {
+      "id": "",
+      "name": "Fadli Hidayatullah",
+      "email": "fadli@heroschool.io",
+      "status": "Active"
+    },
+    {
+      "id": "",
+      "name": "Alessandro",
+      "email": "alessandro@heroschool.io",
+      "status": "Active"
+    },
+    {
+      "id": "",
+      "name": "Imam Faruq",
+      "email": "imamfaruq@heroschool.io",
+      "status": "Active"
+    },
+    {
+      "id": "",
+      "name": "Irvan Alfajri",
+      "email": "irvan@heroschool.io",
+      "status": "Active"
+    },
+    {
+      "id": "",
+      "name": "Nova Julita",
+      "email": "novajulita@heroschool.io",
+      "status": "Inactive"
+    }
+  ]
+}

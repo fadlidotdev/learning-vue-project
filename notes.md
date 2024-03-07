@@ -201,3 +201,11 @@ app.use(Colada)
 
 ...
 ```
+
+## Case Study: Team Dashboard
+
+## Build Modal Component
+
+## Transition
+
+## Teleport
